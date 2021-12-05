@@ -1,0 +1,162 @@
+#main {
+    background-image: linear-gradient( 135deg, #FFF5C3 10%, #9452A5 100%);
+    width: 100%;
+    display: table;
+    overflow: hidden;
+}
+ 
+#main-content {
+    display: table-cell;
+    padding: 0px 20px 20px 20px;
+}
+
+#left-content {
+    width: 43%;
+
+    float: left;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+}
+
+#left-content img {
+    width: 80%;
+    float: left;
+    margin: 1.5%;
+    border: solid black 2px;
+    border-radius: 3rem;
+}
+
+#main-content {
+    width: 50%;
+    color: black;
+    font-family: 'Oswald', cursive;
+    font-size: 20px;
+    float: right;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+}
+
+nav ul li {
+    list-style: none;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 15px 0px 15px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 20px;
+    background-color: gray;
+    color: #ffffff;
+}
+
+nav ul li a:hover, nav ul li a:active {
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 20px;
+    background-color: white;
+    color: #000000;
+}
+
+#header-one {
+    background-image: linear-gradient( 135deg, #FFF5C3 10%, #9452A5 100%);
+    color: black;
+    padding: 5px 5px 15px 5px;
+    height: 90px;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 300px;
+    font-size: 40px;
+}
+
+#header-two {
+    background-color: #FFF5C3;
+    text-align: center;
+    height: 60px;
+    padding: 5px 5px 1px 5px;
+}
+.banner {
+    width: 100%;
+    background: url(http://s6.favim.com/orig/150112/background-cold-gif-nature-Favim.com-2380226.gif);
+    background-size: cover;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+   
+  }
+  
+  .big-text {
+    font-size: 30px;
+    font-weight: 500;
+    
+  }
+  
+  .banner a {
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 40px;
+    padding: 15px;
+    transition: .3s; 
+  }
+    
+  .banner a:hover {
+    background: #333;
+    color: #fff;
+  }
+
+#header-four {
+    background-color: #FFF5C3;
+    color: black;
+    height: 50px;
+    padding: 10px 10px 0px 10px;
+}
+
+h2, h3{
+    font-family: 'Oswald', cursive;
+}
+ 
+#footer-one {
+    background-image: linear-gradient( 135deg, #FFF5C3 10%, #9452A5 100%);
+    color: white;
+    text-align: center;
+    padding: 5px 25px 5px 25px; 
+}
+
+#footer-two {
+        background-color: grey;
+        height: 70px;
+        color: white;
+        text-align: center;
+        padding: 1px 25px 1px 25px; 
+}
+
+#footer-two ul li {
+    list-style: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 0px 15px 0px 15px;
+}
+
+#footer-two a:link, #footer-two a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:link, a:visited {
+    color: navy;
+}
+
+a:hover {
+    color: lightblue;
+}

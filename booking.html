@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lobster&family=Oswald:wght@200&family=Rampart+One&display=swap');
+        </style>
+    <title>Myra's Photography</title>
+    <link href="layout.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header id="header-one">
+        <div style="float: left">
+            <h1>Myra's Photography</h1>
+        </div>
+        <div style="float: right">
+            <label class="question" for="search_website">
+
+                Search the Website:</label><br>
+
+            <input type="text">
+
+            <input type="submit" value="Search">
+        </div>
+    </header>
+
+    <header id="header-two" style="clear: both">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./location.html">Location</a></li>
+                <li><a href="./booking.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header id="header-three">
+    </header>
+
+    <header id="header-four">
+        <h2>Pricing</h2>
+    </header>
+
+    <section id="main">
+
+        <section id="left-content">
+            <img src="booking.jpg" alt="December 2021 Calendar">
+        </section>
+
+        <section id="main-content">
+            <table class="tableclass">
+                <tr>
+                    <td colspan="2">
+                        <h1>In Studio Prices</h1>
+                        <p style="text-align: center;"><strong>
+                            Input the number of people to photograph at time of session. Next input cost per person and any additional charges <br>
+                            to calculate your total cost the day of the session.
+                        </strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form name="theform">
+                            <table>
+                                <tr>
+                                    <td><strong>Studio Charges:</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td style="float: right">Number of People:</td>
+                                    <td><input name="peopleFm" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right">Cost per Person:</td>
+                                    <td><input name="costFm" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><strong>
+                                            <hr>
+                                        </strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Additional Charges:</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right">Backdrop:</td>
+                                    <td><input name="backFm" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right">Accessories:</td>
+                                    <td><input name="accessFm" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right">Miscellaneous:</td>
+                                    <td><input name="miscFm" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total Charges:</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right">Studio Charges:</td>
+                                    <td style="background-color: white; color: black" id="studioChargesFmOutput"></td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right">Additional Charges:</td>
+                                    <td style="background-color: white; color: black" id="addChargesFmOutput"></td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right">Subtotal:</td>
+                                    <td style="background-color: white; color: black" id="subFmOutput"></td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right">Tax 8.25%:</td>
+                                    <td style="background-color: white; color: black" id="taxFmOutput"></td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right">Total Charges:</td>
+                                    <td style="background-color: white; color: black" id="totalFmOutput"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="float:right"><input type="button" name="calc" value="Calculate"
+                                            onclick="calculate();">
+                                        <input type="button" name="clear" value="Clear" onclick="clearinfo();">
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        
+            <script>
+                document.theform.studioFm.focus();
+        
+                
+                function calculate() {
+                    
+                    var people;
+                    var cost;
+        
+                    var back;
+                    var access;
+                    var misc;
+        
+                    var studioCharges;
+                    var addCharges;
+                    var sub;
+                    var tax;
+                    var total;
+        
+                    
+                    people = parseInt(document.theform.peopleFm.value);
+                    cost = parseFloat(document.theform.costFm.value);
+        
+                    back = parseFloat(document.theform.backFm.value);
+                    access = parseFloat(document.theform.accessFm.value);
+                    misc = parseFloat(document.theform.miscFm.value);
+        
+                    
+                    studioCharges = parseFloat(people * cost);
+                    addCharges = parseFloat(back + access + misc);
+                    sub = parseFloat(studioCharges + addCharges);
+                    tax = parseFloat(sub * .0825);
+                    total = parseFloat(sub + tax);
+        
+                    
+                    document.getElementById("studioChargesFmOutput").innerHTML = "$ " + studioCharges.toFixed(2);
+                    document.getElementById("addChargesFmOutput").innerHTML = "$ " + addCharges.toFixed(2);
+                    document.getElementById("subFmOutput").innerHTML = "$ " + sub.toFixed(2);
+                    document.getElementById("taxFmOutput").innerHTML = "$ " + tax.toFixed(2);
+                    document.getElementById("totalFmOutput").innerHTML = "$ " + total.toFixed(2);
+                }
+        
+                
+                function clearinfo() {
+                    document.theform.peopleFm.value = " ";
+                    document.theform.costFm.value = " ";
+        
+                    document.theform.backFm.value = " ";
+                    document.theform.accessFm.value = " ";
+                    document.theform.miscFm.value = " ";
+        
+                    document.getElementById("studioChargesFmOutput").innerHTML = " ";
+                    document.getElementById("addChargesFmOutput").innerHTML = " ";
+                    document.getElementById("subFmOutput").innerHTML = " ";
+                    document.getElementById("taxFmOutput").innerHTML = " ";
+                    document.getElementById("totalFmOutput").innerHTML = " ";
+        
+                    document.theform.nightsFm.focus();
+                }
+        
+            </script>
+
+        </section>
+    </section>
+
+    <footer>
+        <section id="footer-one">
+            <p>Open 7 days a week. </p>
+        </section>
+        <section id="footer-two">
+            <p>&copy; 2021 Photography by Myra, all rights reserved.</p>
+        </section>
+    </footer>
+</body>
+
+</html>
